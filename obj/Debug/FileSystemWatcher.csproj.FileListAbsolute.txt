@@ -1,0 +1,6 @@
+C:\Open\Dev\Test\File System Watcher\FileSystemWatcher\bin\Debug\FileSystemWatcher.dll
+C:\Open\Dev\Test\File System Watcher\FileSystemWatcher\bin\Debug\FileSystemWatcher.pdb
+C:\Open\Dev\Test\File System Watcher\FileSystemWatcher\obj\Debug\FileSystemWatcher.csprojAssemblyReference.cache
+C:\Open\Dev\Test\File System Watcher\FileSystemWatcher\obj\Debug\FileSystemWatcher.csproj.CoreCompileInputs.cache
+C:\Open\Dev\Test\File System Watcher\FileSystemWatcher\obj\Debug\FileSystemWatcher.dll
+C:\Open\Dev\Test\File System Watcher\FileSystemWatcher\obj\Debug\FileSystemWatcher.pdb

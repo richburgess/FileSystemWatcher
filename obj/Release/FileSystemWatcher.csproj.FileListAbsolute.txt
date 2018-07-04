@@ -1,0 +1,5 @@
+C:\Open\Dev\Libraries\File System\FileSystemWatcher\bin\Release\FileSystemWatcher.dll
+C:\Open\Dev\Libraries\File System\FileSystemWatcher\bin\Release\FileSystemWatcher.pdb
+C:\Open\Dev\Libraries\File System\FileSystemWatcher\obj\Release\FileSystemWatcher.csproj.CoreCompileInputs.cache
+C:\Open\Dev\Libraries\File System\FileSystemWatcher\obj\Release\FileSystemWatcher.dll
+C:\Open\Dev\Libraries\File System\FileSystemWatcher\obj\Release\FileSystemWatcher.pdb

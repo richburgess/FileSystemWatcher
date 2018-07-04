@@ -7,6 +7,9 @@ using System.Threading.Tasks;
 namespace Howmet.Utilities.FileSystem
 {
 
+    /// <summary>
+    /// Holds, initiates and manages a collection of FileWatchers.
+    /// </summary>
     public class WatcherManager:FileSystemEventHandlers
     {
 

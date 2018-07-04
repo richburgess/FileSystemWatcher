@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 namespace Howmet.Utilities.FileSystem
 {
 
-    public class FileWatcher: FileSystemEventHandlers
+    /// <summary>
+    /// A class that wraps FileSystemWatcher that is meant to be a single entity in a 
+    /// collection of FileWatchers used to monitor directory structures.
+    /// </summary>
+    public class FileWatcher : FileSystemEventHandlers
     {
 
         #region Constants
@@ -17,9 +21,8 @@ namespace Howmet.Utilities.FileSystem
 
         #region Declarations
 
-        private FileSystemWatcher Watcher = new FileSystemWatcher();
         private string Path = "";
-
+        private FileSystemWatcher Watcher = new FileSystemWatcher();
         private FileSystemEventHandlers Events = new FileSystemEventHandlers();
 
         #endregion
@@ -28,12 +31,12 @@ namespace Howmet.Utilities.FileSystem
 
         public FileWatcher(string path)
         {
-            Path = path;
+            Path = System.IO.Path.GetDirectoryName(path);
             Watcher.Path = Path;
             SendMessage(string.Format("Watching: {0}", Path));
             Watcher.NotifyFilter = NotifyFilters.LastWrite | NotifyFilters.LastAccess | NotifyFilters.CreationTime | NotifyFilters.FileName | NotifyFilters.DirectoryName;
             Watcher.IncludeSubdirectories = true;
-            // Only watch text files.
+            // Watch all files.
             Watcher.Filter = "*.*";
             Watcher.Created += Watcher_FileCreated;
             Watcher.Changed += Watcher_FileModified;
@@ -44,8 +47,6 @@ namespace Howmet.Utilities.FileSystem
         }
 
         #endregion
-
-
 
         #region Event Handling
 
@@ -77,7 +78,6 @@ namespace Howmet.Utilities.FileSystem
         {
             MessageAvailableEventArgs eArgs = new MessageAvailableEventArgs();
             eArgs.Message = message;
-            //OnMessageAvailable(new MessageAvailableEventArgs() { Message = message });
             OnMessageAvailable(eArgs);
         }
 
